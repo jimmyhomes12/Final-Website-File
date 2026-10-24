@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large model artifacts – tracked for portfolio visibility
+# (regenerate with: python -m src.train_model)
+# Python_Data_Analytics/Online_Retail_Churn_Prediction/models/*.pkl
+
+# Generated processed data – tracked for portfolio reproducibility
+# (regenerate with: python -m src.data_prep)
+# Python_Data_Analytics/Online_Retail_Churn_Prediction/data/processed/
+
+# Generated report images – tracked for portfolio visibility
+# (regenerate with: python -m src.evaluate)
+# Python_Data_Analytics/Online_Retail_Churn_Prediction/reports/*.png
