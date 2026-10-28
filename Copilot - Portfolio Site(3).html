@@ -34,21 +34,21 @@
     }
 
     .project-badge-rfm {
-      background: rgba(0, 144, 255, 0.14);
-      border-color: rgba(0, 144, 255, 0.3);
-      color: #0090FF;
+      background: rgba(15, 118, 110, 0.14);
+      border-color: rgba(15, 118, 110, 0.35);
+      color: #0f766e;
     }
 
     .project-badge-excel {
-      background: rgba(255, 179, 71, 0.12);
-      border-color: rgba(255, 179, 71, 0.3);
-      color: #FFB347;
+      background: rgba(47, 107, 62, 0.12);
+      border-color: rgba(47, 107, 62, 0.35);
+      color: #2f6b3e;
     }
 
     .project-badge-powerbi {
-      background: rgba(255, 179, 71, 0.12);
-      border-color: rgba(255, 179, 71, 0.3);
-      color: #FFB347;
+      background: rgba(15, 118, 110, 0.12);
+      border-color: rgba(15, 118, 110, 0.35);
+      color: #0f766e;
     }
   </style>
 </head>
@@ -302,28 +302,35 @@
 
       <!-- ── Project 1 ── -->
       <div class="project-card reveal" data-tags="python,tableau,ml">
-        <div class="project-thumb">
-          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <rect width="400" height="225" fill="var(--project-thumb-bg)"/>
-            <line x1="0" y1="185" x2="400" y2="185" stroke="rgba(0,196,163,0.12)" stroke-width="1"/>
-            <line x1="0" y1="145" x2="400" y2="145" stroke="rgba(0,196,163,0.07)" stroke-width="1"/>
-            <line x1="0" y1="105"  x2="400" y2="105"  stroke="rgba(0,196,163,0.07)" stroke-width="1"/>
-            <line x1="0" y1="65"  x2="400" y2="65"  stroke="rgba(0,196,163,0.07)" stroke-width="1"/>
-            <defs>
-              <linearGradient id="areaGrad1" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#00C4A3" stop-opacity="0.25"/>
-                <stop offset="100%" stop-color="#00C4A3" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <polygon points="20,155 70,128 120,142 170,88 220,108 270,58 320,78 380,38 380,155" fill="url(#areaGrad1)"/>
-            <polyline points="20,155 70,128 120,142 170,88 220,108 270,58 320,78 380,38" fill="none" stroke="#00C4A3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-            <circle cx="270" cy="58" r="4.5" fill="#00C4A3"/>
-            <circle cx="380" cy="38" r="4.5" fill="#00C4A3"/>
-            <text x="270" y="48" font-family="monospace" font-size="9" fill="#00C4A3" text-anchor="middle">Trend</text>
-            <text x="20" y="22" font-family="monospace" font-size="10.5" fill="rgba(0,196,163,0.65)">E-COMMERCE REVENUE TREND</text>
-            <text x="380" y="178" font-family="monospace" font-size="8" fill="var(--project-thumb-text-soft)" text-anchor="end">Rolling period</text>
+        <div class="project-thumb project-thumb--p1">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" role="img" aria-labelledby="p1-thumb-title p1-thumb-desc">
+            <title id="p1-thumb-title">Gold and silver forecasting thumbnail</title>
+            <desc id="p1-thumb-desc">Line chart with gold and silver series and a geopolitical risk mini panel.</desc>
+            <rect width="400" height="225" fill="var(--thumb-bg)"/>
+            <rect x="22" y="22" width="356" height="134" rx="8" fill="var(--thumb-surface)"/>
+            <g stroke="var(--thumb-grid)" stroke-width="1">
+              <line x1="38" y1="44" x2="362" y2="44"/>
+              <line x1="38" y1="78" x2="362" y2="78"/>
+              <line x1="38" y1="112" x2="362" y2="112"/>
+              <line x1="38" y1="146" x2="362" y2="146"/>
+            </g>
+            <polyline points="38,128 76,117 114,121 152,94 190,101 228,82 266,75 304,61 342,50"
+              fill="none" stroke="var(--p1-gold)" stroke-width="2.5" stroke-linecap="round"/>
+            <polyline points="38,138 76,134 114,126 152,116 190,108 228,100 266,93 304,89 342,80"
+              fill="none" stroke="var(--p1-silver)" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="22" y="166" width="356" height="40" rx="8" fill="var(--thumb-surface)"/>
+            <polyline points="38,194 76,186 114,191 152,180 190,188 228,173 266,182 304,169 342,175"
+              fill="none" stroke="var(--p1-risk)" stroke-width="2" stroke-linecap="round"/>
+            <text x="38" y="18" font-family="monospace" font-size="10.5" fill="var(--thumb-soft)">GOLD VS SILVER · 1985–2025</text>
+            <text x="38" y="184" font-family="monospace" font-size="8" fill="var(--thumb-soft)">GPRD signal panel</text>
+            <g font-family="monospace" font-size="8.5" fill="var(--thumb-label)">
+              <text x="284" y="37">Gold</text>
+              <text x="322" y="37">Silver</text>
+            </g>
+            <circle cx="276" cy="34" r="4" fill="var(--p1-gold)"/>
+            <circle cx="313" cy="34" r="4" fill="var(--p1-silver)"/>
           </svg>
-          <div class="project-badge">Python · XGBoost · Tableau</div>
+          <div class="project-badge">Python · XGBoost · Streamlit</div>
         </div>
         <div class="project-body">
           <div class="project-category">Quantitative Finance · Time-Series Forecasting</div>
@@ -350,24 +357,32 @@
 
       <!-- ── Project 2 ── -->
       <div class="project-card reveal delay-1" data-tags="python,sql,tableau">
-        <div class="project-thumb">
-          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <rect width="400" height="225" fill="var(--project-thumb-bg)"/>
-            <line x1="0" y1="170" x2="400" y2="170" stroke="var(--project-thumb-line)" stroke-width="1"/>
-            <rect x="28"  y="110" width="38" height="60" rx="3" fill="rgba(0,144,255,0.55)"/>
-            <rect x="82"  y="83"  width="38" height="87" rx="3" fill="rgba(0,144,255,0.6)"/>
-            <rect x="136" y="63"  width="38" height="107" rx="3" fill="#0090FF"/>
-            <rect x="190" y="93" width="38" height="77" rx="3" fill="rgba(0,144,255,0.6)"/>
-            <rect x="244" y="47"  width="38" height="123" rx="3" fill="#00C4A3"/>
-            <rect x="298" y="73"  width="38" height="97" rx="3" fill="rgba(0,196,163,0.6)"/>
-            <text x="263" y="40" font-family="monospace" font-size="9" fill="#00C4A3" text-anchor="middle">BEST</text>
-            <text x="28"  y="187" font-family="monospace" font-size="8" fill="var(--project-thumb-text-soft)">Dormant</text>
-            <text x="82"  y="187" font-family="monospace" font-size="8" fill="var(--project-thumb-text-soft)">At-Risk</text>
-            <text x="136" y="187" font-family="monospace" font-size="8" fill="var(--project-thumb-text-soft)">New</text>
-            <text x="190" y="187" font-family="monospace" font-size="8" fill="var(--project-thumb-text-soft)">Regular</text>
-            <text x="244" y="187" font-family="monospace" font-size="8" fill="var(--project-thumb-text-soft)">VIP</text>
-            <text x="298" y="187" font-family="monospace" font-size="8" fill="var(--project-thumb-text-soft)">Loyal</text>
-            <text x="20"  y="22"  font-family="monospace" font-size="10.5" fill="rgba(0,144,255,0.7)">CUSTOMER SEGMENTS · RFM MODEL</text>
+        <div class="project-thumb project-thumb--p2">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" role="img" aria-labelledby="p2-thumb-title p2-thumb-desc">
+            <title id="p2-thumb-title">E-commerce RFM dashboard thumbnail</title>
+            <desc id="p2-thumb-desc">KPI cards above an RFM heatmap with sales panel highlights.</desc>
+            <rect width="400" height="225" fill="var(--thumb-bg)"/>
+            <rect x="18" y="18" width="114" height="48" rx="8" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <rect x="142" y="18" width="114" height="48" rx="8" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <rect x="266" y="18" width="116" height="48" rx="8" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <text x="26" y="35" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Sales</text>
+            <text x="26" y="52" font-family="monospace" font-size="11" fill="var(--p2-emerald)">$1.27M</text>
+            <text x="150" y="35" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Customers</text>
+            <text x="150" y="52" font-family="monospace" font-size="11" fill="var(--p2-teal)">797</text>
+            <text x="274" y="35" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Promo ROI</text>
+            <text x="274" y="52" font-family="monospace" font-size="11" fill="var(--p2-charcoal)">4 Codes</text>
+            <rect x="18" y="78" width="364" height="129" rx="10" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <g>
+              <rect x="38" y="96" width="52" height="20" fill="#d9fbe7"/><rect x="90" y="96" width="52" height="20" fill="#c8f7e0"/><rect x="142" y="96" width="52" height="20" fill="#b2f0d5"/><rect x="194" y="96" width="52" height="20" fill="#98e7c8"/><rect x="246" y="96" width="52" height="20" fill="#7ddcb8"/>
+              <rect x="38" y="116" width="52" height="20" fill="#c8f7e0"/><rect x="90" y="116" width="52" height="20" fill="#b2f0d5"/><rect x="142" y="116" width="52" height="20" fill="#98e7c8"/><rect x="194" y="116" width="52" height="20" fill="#7ddcb8"/><rect x="246" y="116" width="52" height="20" fill="#5fcfa7"/>
+              <rect x="38" y="136" width="52" height="20" fill="#b2f0d5"/><rect x="90" y="136" width="52" height="20" fill="#98e7c8"/><rect x="142" y="136" width="52" height="20" fill="#7ddcb8"/><rect x="194" y="136" width="52" height="20" fill="#5fcfa7"/><rect x="246" y="136" width="52" height="20" fill="#3bbf91"/>
+              <rect x="38" y="156" width="52" height="20" fill="#98e7c8"/><rect x="90" y="156" width="52" height="20" fill="#7ddcb8"/><rect x="142" y="156" width="52" height="20" fill="#5fcfa7"/><rect x="194" y="156" width="52" height="20" fill="#3bbf91"/><rect x="246" y="156" width="52" height="20" fill="#22a57c"/>
+              <rect x="38" y="176" width="52" height="20" fill="#7ddcb8"/><rect x="90" y="176" width="52" height="20" fill="#5fcfa7"/><rect x="142" y="176" width="52" height="20" fill="#3bbf91"/><rect x="194" y="176" width="52" height="20" fill="#22a57c"/><rect x="246" y="176" width="52" height="20" fill="#0f766e"/>
+            </g>
+            <text x="304" y="106" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">R/F grid</text>
+            <text x="304" y="126" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">Revenue</text>
+            <text x="304" y="146" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">intensity</text>
+            <text x="38" y="88" font-family="monospace" font-size="8" fill="var(--thumb-soft)">RFM HEATMAP</text>
           </svg>
           <div class="project-badge project-badge-rfm">Python · SQL · Tableau</div>
         </div>
@@ -396,26 +411,35 @@
 
       <!-- ── Project 3 ── -->
       <div class="project-card reveal delay-2" data-tags="excel">
-        <div class="project-thumb">
-          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <rect width="400" height="225" fill="var(--project-thumb-bg)"/>
-            <line x1="20" y1="40" x2="20" y2="180" stroke="var(--project-thumb-line)" stroke-width="1" />
-            <line x1="20" y1="180" x2="360" y2="180" stroke="var(--project-thumb-line)" stroke-width="1" />
-            <!-- Scatter dots sized by revenue -->
-            <circle cx="55" cy="150" r="6" fill="rgba(255,179,71,0.65)" />
-            <circle cx="90" cy="125" r="9" fill="rgba(255,179,71,0.7)" />
-            <circle cx="120" cy="138" r="5" fill="rgba(255,179,71,0.55)" />
-            <circle cx="155" cy="92" r="12" fill="#FFB347" />
-            <circle cx="190" cy="112" r="7" fill="rgba(255,179,71,0.7)" />
-            <circle cx="230" cy="78" r="10" fill="#FFB347" />
-            <circle cx="270" cy="65" r="8" fill="rgba(255,179,71,0.75)" />
-            <circle cx="315" cy="55" r="14" fill="#FFB347" />
-            <line x1="30" y1="168" x2="350" y2="48" stroke="rgba(0,196,163,0.5)" stroke-width="1.5" stroke-dasharray="5,4" />
-            <text x="330" y="42" font-family="monospace" font-size="8" fill="rgba(0,196,163,0.6)">pattern</text>
-            <text x="20" y="22" font-family="monospace" font-size="10.5" fill="rgba(255,179,71,0.65)">MARKET BASKET
-              CORRELATION</text>
-            <text x="293" y="192" font-family="monospace" font-size="8" fill="var(--project-thumb-text-soft)">Purchase Frequency
-            →</text>
+        <div class="project-thumb project-thumb--p3">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" role="img" aria-labelledby="p3-thumb-title p3-thumb-desc">
+            <title id="p3-thumb-title">Excel retail KPI dashboard thumbnail</title>
+            <desc id="p3-thumb-desc">Spreadsheet-inspired layout with KPI cards, trend line, and category bars.</desc>
+            <rect width="400" height="225" fill="var(--thumb-bg)"/>
+            <rect x="16" y="16" width="368" height="193" rx="10" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <g stroke="var(--thumb-grid)" stroke-width="1">
+              <line x1="16" y1="62" x2="384" y2="62"/>
+              <line x1="16" y1="132" x2="384" y2="132"/>
+              <line x1="138" y1="62" x2="138" y2="132"/>
+              <line x1="260" y1="62" x2="260" y2="132"/>
+            </g>
+            <text x="28" y="35" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Revenue</text>
+            <text x="28" y="52" font-family="monospace" font-size="10.5" fill="var(--p3-forest)">$2.26M</text>
+            <text x="150" y="35" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Transactions</text>
+            <text x="150" y="52" font-family="monospace" font-size="10.5" fill="var(--p3-forest)">17,393</text>
+            <text x="272" y="35" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Margin</text>
+            <text x="272" y="52" font-family="monospace" font-size="10.5" fill="var(--p3-lime)">56.75%</text>
+            <polyline points="34,116 72,108 110,101 148,95 186,90 224,82 262,76 300,71 338,66"
+              fill="none" stroke="var(--p3-forest)" stroke-width="2.4" stroke-linecap="round"/>
+            <g>
+              <rect x="40" y="160" width="30" height="32" fill="#d6e8d9"/>
+              <rect x="86" y="154" width="30" height="38" fill="#bdd9c3"/>
+              <rect x="132" y="146" width="30" height="46" fill="#a2caac"/>
+              <rect x="178" y="137" width="30" height="55" fill="#89bd95"/>
+              <rect x="224" y="129" width="30" height="63" fill="#70ad7d"/>
+            </g>
+            <text x="272" y="168" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Top categories</text>
+            <text x="272" y="184" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Excel slicers</text>
           </svg>
           <div class="project-badge project-badge-excel">Excel · Power Query</div>
         </div>
@@ -443,27 +467,29 @@
 
       <!-- ── Project 4 ── -->
       <div class="project-card reveal delay-3" data-tags="python,ml">
-        <div class="project-thumb">
-          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <rect width="400" height="225" fill="var(--project-thumb-bg)"/>
-            <!-- KPI cards row -->
-            <rect x="18" y="22" width="108" height="58" rx="6" fill="rgba(0,196,163,0.08)" stroke="rgba(0,196,163,0.22)" stroke-width="1"/>
-            <text x="72" y="47"  font-family="monospace" font-size="19" fill="#00C4A3" text-anchor="middle" font-weight="bold">94%</text>
-            <text x="72" y="63"  font-family="monospace" font-size="8"  fill="rgba(0,196,163,0.55)" text-anchor="middle">SLA UPTIME</text>
-
-            <rect x="140" y="22" width="108" height="58" rx="6" fill="rgba(0,144,255,0.08)" stroke="rgba(0,144,255,0.22)" stroke-width="1"/>
-            <text x="194" y="47" font-family="monospace" font-size="19" fill="#0090FF" text-anchor="middle" font-weight="bold">1.4M</text>
-            <text x="194" y="63" font-family="monospace" font-size="8"  fill="rgba(0,144,255,0.55)" text-anchor="middle">SESSIONS</text>
-
-            <rect x="262" y="22" width="120" height="58" rx="6" fill="rgba(255,179,71,0.08)" stroke="rgba(255,179,71,0.22)" stroke-width="1"/>
-            <text x="322" y="47" font-family="monospace" font-size="19" fill="#FFB347" text-anchor="middle" font-weight="bold">$2.1M</text>
-            <text x="322" y="63" font-family="monospace" font-size="8"  fill="rgba(255,179,71,0.55)" text-anchor="middle">REVENUE</text>
-
-            <!-- Sparklines -->
-            <polyline points="18,175 48,158 78,164 108,143 126,150" fill="none" stroke="rgba(0,196,163,0.55)" stroke-width="1.8" stroke-linejoin="round"/>
-            <polyline points="140,170 170,148 200,160 230,133 248,142" fill="none" stroke="rgba(0,144,255,0.55)" stroke-width="1.8" stroke-linejoin="round"/>
-            <polyline points="262,175 292,157 322,163 352,138 382,128" fill="none" stroke="rgba(255,179,71,0.55)" stroke-width="1.8" stroke-linejoin="round"/>
-            <text x="320" y="192" font-family="monospace" font-size="7.5" fill="var(--project-thumb-text-soft)">Jan → Dec trend</text>
+        <div class="project-thumb project-thumb--p4">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" role="img" aria-labelledby="p4-thumb-title p4-thumb-desc">
+            <title id="p4-thumb-title">Customer churn model thumbnail</title>
+            <desc id="p4-thumb-desc">Churn and retention bars with model AUC and top feature chart.</desc>
+            <rect width="400" height="225" fill="var(--thumb-bg)"/>
+            <rect x="20" y="20" width="180" height="86" rx="9" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <text x="30" y="37" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Customer split</text>
+            <rect x="34" y="52" width="42" height="40" fill="var(--p4-coral)"/>
+            <rect x="84" y="40" width="42" height="52" fill="var(--p4-violet)"/>
+            <rect x="134" y="28" width="42" height="64" fill="var(--p4-indigo)"/>
+            <text x="34" y="102" font-family="monospace" font-size="7" fill="var(--thumb-soft)">Churn</text>
+            <text x="84" y="102" font-family="monospace" font-size="7" fill="var(--thumb-soft)">At-risk</text>
+            <text x="134" y="102" font-family="monospace" font-size="7" fill="var(--thumb-soft)">Retained</text>
+            <rect x="210" y="20" width="170" height="86" rx="9" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <text x="222" y="39" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Model AUC</text>
+            <text x="222" y="72" font-family="monospace" font-size="21" fill="var(--p4-violet)">0.5305</text>
+            <text x="222" y="92" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">Random Forest</text>
+            <rect x="20" y="116" width="360" height="89" rx="9" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <text x="30" y="136" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Top feature importance</text>
+            <rect x="34" y="148" width="220" height="10" rx="4" fill="var(--p4-indigo)"/>
+            <rect x="34" y="164" width="212" height="10" rx="4" fill="var(--p4-violet)"/>
+            <rect x="34" y="180" width="204" height="10" rx="4" fill="var(--p4-coral)"/>
+            <text x="260" y="156" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">Avg time / Recency / Income</text>
           </svg>
           <div class="project-badge">Python · Scikit-learn</div>
         </div>
@@ -491,68 +517,30 @@
 
       <!-- ── Project 5 ── -->
       <div class="project-card reveal" data-tags="python">
-        <div class="project-thumb">
-          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <rect width="400" height="225" fill="var(--project-thumb-bg)"/>
-            <!-- Heatmap grid -->
-            <text x="20" y="22" font-family="monospace" font-size="10.5" fill="rgba(0,196,163,0.65)">WEEKLY ENGAGEMENT HEATMAP</text>
-            <g font-family="monospace" font-size="8" fill="var(--project-thumb-text)">
-              <text x="20" y="50">Mon</text><text x="20" y="75">Tue</text>
-              <text x="20" y="100">Wed</text><text x="20" y="125">Thu</text>
-              <text x="20" y="150">Fri</text>
-            </g>
-            <!-- cells: 7 hours × 5 days -->
-            <g>
-              <!-- Row 1 Mon -->
-              <rect x="58" y="36" width="44" height="22" rx="3" fill="rgba(0,196,163,0.12)"/>
-              <rect x="108" y="36" width="44" height="22" rx="3" fill="rgba(0,196,163,0.28)"/>
-              <rect x="158" y="36" width="44" height="22" rx="3" fill="rgba(0,196,163,0.55)"/>
-              <rect x="208" y="36" width="44" height="22" rx="3" fill="#00C4A3"/>
-              <rect x="258" y="36" width="44" height="22" rx="3" fill="rgba(0,196,163,0.7)"/>
-              <rect x="308" y="36" width="44" height="22" rx="3" fill="rgba(0,196,163,0.4)"/>
-              <rect x="358" y="36" width="34" height="22" rx="3" fill="rgba(0,196,163,0.18)"/>
-              <!-- Row 2 Tue -->
-              <rect x="58"  y="62" width="44" height="22" rx="3" fill="rgba(0,196,163,0.22)"/>
-              <rect x="108" y="62" width="44" height="22" rx="3" fill="rgba(0,196,163,0.6)"/>
-              <rect x="158" y="62" width="44" height="22" rx="3" fill="#00C4A3"/>
-              <rect x="208" y="62" width="44" height="22" rx="3" fill="rgba(0,196,163,0.85)"/>
-              <rect x="258" y="62" width="44" height="22" rx="3" fill="rgba(0,196,163,0.5)"/>
-              <rect x="308" y="62" width="44" height="22" rx="3" fill="rgba(0,196,163,0.3)"/>
-              <rect x="358" y="62" width="34" height="22" rx="3" fill="rgba(0,196,163,0.1)"/>
-              <!-- Row 3 Wed -->
-              <rect x="58"  y="88" width="44" height="22" rx="3" fill="rgba(0,196,163,0.35)"/>
-              <rect x="108" y="88" width="44" height="22" rx="3" fill="rgba(0,196,163,0.65)"/>
-              <rect x="158" y="88" width="44" height="22" rx="3" fill="rgba(0,196,163,0.9)"/>
-              <rect x="208" y="88" width="44" height="22" rx="3" fill="#00C4A3"/>
-              <rect x="258" y="88" width="44" height="22" rx="3" fill="rgba(0,196,163,0.75)"/>
-              <rect x="308" y="88" width="44" height="22" rx="3" fill="rgba(0,196,163,0.45)"/>
-              <rect x="358" y="88" width="34" height="22" rx="3" fill="rgba(0,196,163,0.2)"/>
-              <!-- Row 4 Thu -->
-              <rect x="58"  y="114" width="44" height="22" rx="3" fill="rgba(0,196,163,0.18)"/>
-              <rect x="108" y="114" width="44" height="22" rx="3" fill="rgba(0,196,163,0.45)"/>
-              <rect x="158" y="114" width="44" height="22" rx="3" fill="rgba(0,196,163,0.7)"/>
-              <rect x="208" y="114" width="44" height="22" rx="3" fill="rgba(0,196,163,0.85)"/>
-              <rect x="258" y="114" width="44" height="22" rx="3" fill="rgba(0,196,163,0.55)"/>
-              <rect x="308" y="114" width="44" height="22" rx="3" fill="rgba(0,196,163,0.35)"/>
-              <rect x="358" y="114" width="34" height="22" rx="3" fill="rgba(0,196,163,0.12)"/>
-              <!-- Row 5 Fri -->
-              <rect x="58"  y="140" width="44" height="22" rx="3" fill="rgba(0,196,163,0.1)"/>
-              <rect x="108" y="140" width="44" height="22" rx="3" fill="rgba(0,196,163,0.25)"/>
-              <rect x="158" y="140" width="44" height="22" rx="3" fill="rgba(0,196,163,0.45)"/>
-              <rect x="208" y="140" width="44" height="22" rx="3" fill="rgba(0,196,163,0.6)"/>
-              <rect x="258" y="140" width="44" height="22" rx="3" fill="rgba(0,196,163,0.35)"/>
-              <rect x="308" y="140" width="44" height="22" rx="3" fill="rgba(0,196,163,0.2)"/>
-              <rect x="358" y="140" width="34" height="22" rx="3" fill="rgba(0,196,163,0.08)"/>
-            </g>
-            <g font-family="monospace" font-size="7.5" fill="var(--project-thumb-text-soft)">
-              <text x="75"  y="175" text-anchor="middle">9am</text>
-              <text x="125" y="175" text-anchor="middle">11am</text>
-              <text x="175" y="175" text-anchor="middle">1pm</text>
-              <text x="225" y="175" text-anchor="middle">3pm</text>
-              <text x="275" y="175" text-anchor="middle">5pm</text>
-              <text x="325" y="175" text-anchor="middle">7pm</text>
-              <text x="372" y="175" text-anchor="middle">9pm</text>
-            </g>
+        <div class="project-thumb project-thumb--p5">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" role="img" aria-labelledby="p5-thumb-title p5-thumb-desc">
+            <title id="p5-thumb-title">A/B testing analytics thumbnail</title>
+            <desc id="p5-thumb-desc">Control vs treatment conversion bars with confidence interval and z-test result.</desc>
+            <rect width="400" height="225" fill="var(--thumb-bg)"/>
+            <rect x="20" y="20" width="190" height="185" rx="10" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <rect x="220" y="20" width="160" height="88" rx="10" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <rect x="220" y="117" width="160" height="88" rx="10" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <text x="34" y="42" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Conversion rate</text>
+            <line x1="38" y1="174" x2="192" y2="174" stroke="var(--thumb-grid)"/>
+            <rect x="58" y="90" width="40" height="84" fill="var(--p5-orange)"/>
+            <rect x="124" y="96" width="40" height="78" fill="var(--p5-turquoise)"/>
+            <text x="58" y="186" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">Control</text>
+            <text x="122" y="186" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">Variant</text>
+            <text x="58" y="86" font-family="monospace" font-size="8" fill="var(--thumb-label)">12.04%</text>
+            <text x="124" y="92" font-family="monospace" font-size="8" fill="var(--thumb-label)">11.88%</text>
+            <text x="234" y="40" font-family="monospace" font-size="8" fill="var(--thumb-soft)">95% CI diff</text>
+            <line x1="238" y1="73" x2="368" y2="73" stroke="var(--thumb-grid)" stroke-width="2"/>
+            <line x1="260" y1="73" x2="346" y2="73" stroke="var(--p5-turquoise)" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="300" cy="73" r="4" fill="var(--p5-orange)"/>
+            <text x="234" y="96" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">[-0.394pp, +0.078pp]</text>
+            <text x="234" y="137" font-family="monospace" font-size="8" fill="var(--thumb-soft)">z-test</text>
+            <text x="234" y="161" font-family="monospace" font-size="18" fill="var(--thumb-label)">p=0.905</text>
+            <text x="234" y="186" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">No significant lift</text>
           </svg>
           <div class="project-badge">Python · Statistics</div>
         </div>
@@ -580,52 +568,49 @@
 
       <!-- ── Project 6 ── -->
       <div class="project-card reveal delay-1" data-tags="powerbi">
-        <div class="project-thumb">
-          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <rect width="400" height="225" fill="var(--project-thumb-bg)"/>
-            <text x="20" y="22" font-family="monospace" font-size="10.5" fill="rgba(255,179,71,0.65)">SUPPLY CHAIN COST BREAKDOWN</text>
-            <!-- Donut segments approximated as arcs using path -->
-            <!-- Using simple pie wedges as rects in a stacked visual instead -->
-            <g transform="translate(140,105)">
-              <!-- Circle background -->
-              <circle cx="0" cy="0" r="68" fill="var(--project-thumb-panel)" stroke="var(--project-thumb-panel-border)" stroke-width="1"/>
-              <!-- Segments using stroke-dasharray trick on a circle r=50, circumference≈314 -->
-              <circle cx="0" cy="0" r="50" fill="none" stroke="#FFB347" stroke-width="22" stroke-dasharray="113 201" stroke-dashoffset="0" transform="rotate(-90)"/>
-              <circle cx="0" cy="0" r="50" fill="none" stroke="rgba(0,144,255,0.8)" stroke-width="22" stroke-dasharray="82 232" stroke-dashoffset="-113" transform="rotate(-90)"/>
-              <circle cx="0" cy="0" r="50" fill="none" stroke="rgba(0,196,163,0.8)" stroke-width="22" stroke-dasharray="63 251" stroke-dashoffset="-195" transform="rotate(-90)"/>
-              <circle cx="0" cy="0" r="50" fill="none" stroke="var(--project-thumb-line)" stroke-width="22" stroke-dasharray="56 258" stroke-dashoffset="-258" transform="rotate(-90)"/>
-              <!-- Inner white circle for donut -->
-              <circle cx="0" cy="0" r="38" fill="var(--project-thumb-bg)"/>
-              <text x="0" y="5" font-family="monospace" font-size="11" fill="var(--project-thumb-text)" text-anchor="middle">$4.8M</text>
-              <text x="0" y="18" font-family="monospace" font-size="7.5" fill="var(--project-thumb-text-soft)" text-anchor="middle">total cost</text>
-            </g>
-            <!-- Legend -->
-            <rect x="240" y="60"  width="8" height="8" rx="2" fill="#FFB347"/>
-            <text x="254" y="69" font-family="monospace" font-size="9" fill="var(--project-thumb-text)">Logistics 36%</text>
-            <rect x="240" y="80"  width="8" height="8" rx="2" fill="rgba(0,144,255,0.8)"/>
-            <text x="254" y="89" font-family="monospace" font-size="9" fill="var(--project-thumb-text)">Storage 26%</text>
-            <rect x="240" y="100" width="8" height="8" rx="2" fill="rgba(0,196,163,0.8)"/>
-            <text x="254" y="109" font-family="monospace" font-size="9" fill="var(--project-thumb-text)">Labor 20%</text>
-            <rect x="240" y="120" width="8" height="8" rx="2" fill="var(--project-thumb-line)"/>
-            <text x="254" y="129" font-family="monospace" font-size="9" fill="var(--project-thumb-text)">Other 18%</text>
+        <div class="project-thumb project-thumb--p6">
+          <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" role="img" aria-labelledby="p6-thumb-title p6-thumb-desc">
+            <title id="p6-thumb-title">Data warehouse and Power BI thumbnail</title>
+            <desc id="p6-thumb-desc">Star schema diagram with fact table and dimensions plus BI KPI panel.</desc>
+            <rect width="400" height="225" fill="var(--thumb-bg)"/>
+            <rect x="18" y="24" width="210" height="176" rx="10" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <rect x="96" y="94" width="60" height="32" rx="6" fill="var(--p6-teal)"/>
+            <text x="126" y="114" font-family="monospace" font-size="7.5" fill="#ffffff" text-anchor="middle">fact_sales</text>
+            <rect x="32" y="44" width="60" height="24" rx="5" fill="#e7f3f4"/><text x="62" y="59" font-family="monospace" font-size="7" fill="var(--p6-slate)" text-anchor="middle">dim_date</text>
+            <rect x="156" y="44" width="60" height="24" rx="5" fill="#fef4dc"/><text x="186" y="59" font-family="monospace" font-size="7" fill="var(--p6-slate)" text-anchor="middle">dim_channel</text>
+            <rect x="32" y="150" width="60" height="24" rx="5" fill="#edf3f9"/><text x="62" y="165" font-family="monospace" font-size="7" fill="var(--p6-slate)" text-anchor="middle">dim_product</text>
+            <rect x="156" y="150" width="60" height="24" rx="5" fill="#edf3f9"/><text x="186" y="165" font-family="monospace" font-size="7" fill="var(--p6-slate)" text-anchor="middle">dim_customer</text>
+            <line x1="96" y1="56" x2="126" y2="94" stroke="var(--p6-slate)"/>
+            <line x1="186" y1="56" x2="156" y2="94" stroke="var(--p6-slate)"/>
+            <line x1="92" y1="162" x2="96" y2="126" stroke="var(--p6-slate)"/>
+            <line x1="156" y1="126" x2="156" y2="162" stroke="var(--p6-slate)"/>
+            <rect x="242" y="24" width="140" height="84" rx="10" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <text x="256" y="45" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Power BI cards</text>
+            <text x="256" y="66" font-family="monospace" font-size="16" fill="var(--p6-teal)">DW + BI</text>
+            <text x="256" y="82" font-family="monospace" font-size="7.5" fill="var(--thumb-soft)">Semantic model</text>
+            <rect x="242" y="116" width="140" height="84" rx="10" fill="var(--thumb-surface)" stroke="var(--thumb-grid)"/>
+            <polyline points="256,184 276,168 296,176 316,154 336,160 356,146"
+              fill="none" stroke="var(--p6-amber)" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="256" y="136" font-family="monospace" font-size="8" fill="var(--thumb-soft)">Revenue trend</text>
           </svg>
-          <div class="project-badge project-badge-powerbi">Power BI · DAX</div>
+          <div class="project-badge project-badge-powerbi">PostgreSQL · Power BI</div>
         </div>
         <div class="project-body">
-          <div class="project-category">E-commerce · Business Intelligence</div>
-          <h3 class="project-title"><a class="project-title-link" href="assets/projects/project-6/index.html">E-commerce Power BI Report</a></h3>
+          <div class="project-category">E-commerce · Data Warehouse & BI</div>
+          <h3 class="project-title"><a class="project-title-link" href="assets/projects/project-6/index.html">E-commerce Data Warehouse &amp; Power BI</a></h3>
           <div class="project-desc">
-            Power BI project with a semantic model and report built on e-commerce data,
-            covering sales performance, customer behavior, and product analytics for
-            business intelligence workflows.
+            Builds a PostgreSQL star schema, ETL workflow, and quality checks before
+            surfacing churn, sales, and experiment metrics through a Power BI semantic
+            model and report layout.
           </div>
-          <div class="project-impact">Semantic model plus interactive report for e-commerce analytics</div>
+          <div class="project-impact">Warehouse-to-dashboard pipeline spanning SQL modeling and BI delivery</div>
           <div class="project-tags">
+            <span class="project-tag">PostgreSQL</span>
             <span class="project-tag">Power BI</span>
             <span class="project-tag">DAX</span>
-            <span class="project-tag">Data Modeling</span>
-            <span class="project-tag">Customer Analytics</span>
-            <span class="project-tag">Product Analytics</span>
+            <span class="project-tag">Star Schema</span>
+            <span class="project-tag">ETL</span>
+            <span class="project-tag">Data Quality</span>
           </div>
           <div class="project-links">
             <a href="assets/projects/project-6/index.html" class="btn-sm hi">View Project</a>

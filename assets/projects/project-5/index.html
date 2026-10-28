@@ -3,68 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 5 | Steven Legoute Portfolio</title>
+  <title>Project 5 | E-commerce A/B Testing and Statistical Analysis</title>
   <link rel="stylesheet" href="../../../styles.css">
 </head>
-<body class="page-body">
+<body class="page-body project-detail-page project-theme--p5">
   <main class="layout-container page-main">
+    <div class="project-detail-header">
+      <a class="btn-secondary" href="../../../Copilot - Portfolio Site(3).html#projects">← Back to Portfolio</a>
+      <button class="theme-button project-theme-toggle" type="button" onclick="toggleTheme()">Light / Dark</button>
+    </div>
+
     <section class="section-block section-block--no-margin-top">
-      <div class="section-header">
-        <h1 class="section-title">Project 5 Title</h1>
-      </div>
-      <p class="body-copy">Add project description here.</p>
+      <article class="project-hero">
+        <p class="project-kicker">Project 5 · Experimentation</p>
+        <h1 class="section-title">E-commerce A/B Testing and Statistical Analysis</h1>
+        <p class="project-summary">One-tailed two-proportion z-test analysis assessing whether a new landing page improves conversion versus the existing control page.</p>
+        <div class="project-chip-row">
+          <span class="project-chip">Python</span><span class="project-chip">statsmodels</span><span class="project-chip">Hypothesis Testing</span><span class="project-chip">Confidence Intervals</span>
+        </div>
+      </article>
 
       <div class="stack-large stack-large--with-margin-top">
-        <div class="surface-card">
-          <h2 class="card-title">Project Objectives</h2>
-          <p class="body-copy">Add project objectives here.</p>
+        <div class="project-section-grid">
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Business Problem & Objective</h2>
+            <ul class="project-list">
+              <li>Determine if the treatment landing page increases conversion above the control page.</li>
+              <li>Quantify effect size and confidence interval before launch decisions.</li>
+              <li>Provide decision-ready recommendation with statistical interpretation.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Dataset</h2>
+            <ul class="project-list">
+              <li>Raw file: <code>ab_test_raw.csv</code> with 294,478 rows and 5 columns.</li>
+              <li>After removing mismatched group/page assignments: 290,585 valid records.</li>
+              <li>Control: 145,274 users (12.04% conversion); Treatment: 145,311 users (11.88% conversion).</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Methodology</h2>
+            <ul class="project-list">
+              <li>Data QA and mismatch filtering for assignment integrity.</li>
+              <li>One-tailed z-test for two proportions at α = 0.05.</li>
+              <li>95% confidence intervals for each group and treatment-control difference.</li>
+              <li>Business interpretation of non-significant uplift outcome.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Statistical Findings</h2>
+            <ul class="project-list">
+              <li>Z-statistic: -1.3116; one-tailed p-value: 0.9052.</li>
+              <li>Estimated difference (treatment - control): -0.158 percentage points.</li>
+              <li>95% CI for difference: [-0.394 pp, +0.078 pp].</li>
+              <li>Conclusion: fail to reject H₀; no evidence of conversion improvement.</li>
+            </ul>
+          </article>
         </div>
 
-        <div class="surface-card">
-          <h2 class="card-title">Tools &amp; Technologies</h2>
-          <ul class="body-copy">
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Tableau</li>
+        <article class="project-card-detail">
+          <h2 class="project-card-title">Visual Evidence</h2>
+          <div class="project-visual-grid">
+            <figure class="project-visual">
+              <img src="images/conversion_rates.png" alt="Control and treatment conversion rates chart">
+              <figcaption class="project-caption">Conversion comparison between control and treatment groups.</figcaption>
+            </figure>
+            <figure class="project-visual">
+              <img src="images/ci_difference.png" alt="Confidence interval chart for conversion rate difference">
+              <figcaption class="project-caption">95% CI plot for treatment-control difference, including the zero-effect reference.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project-card-detail project-deliverables">
+          <h2 class="project-card-title">Results, Recommendation & Deliverables</h2>
+          <ul class="project-list">
+            <li>Result: no statistically significant uplift from the new page in this test run.</li>
+            <li>Recommendation: do not launch treatment as-is; iterate on a stronger variant and retest.</li>
+            <li>Notebook: <a href="../../../Project%20Work/Project-5/Statistics_Foundations/AB_Test_Ecommerce/notebooks/01_ab_test_ecommerce.ipynb">01_ab_test_ecommerce.ipynb</a></li>
+            <li>Summary report: <a href="../../../Project%20Work/Project-5/Statistics_Foundations/AB_Test_Ecommerce/reports/ab_test_summary.md">ab_test_summary.md</a></li>
+            <li>Raw data: <a href="../../../Project%20Work/Project-5/Statistics_Foundations/AB_Test_Ecommerce/data/ab_test_raw.csv">ab_test_raw.csv</a></li>
+            <li>Source folder: <a href="https://github.com/jimmyhomes12/Final-Website-File/tree/main/Project%20Work/Project-5" target="_blank" rel="noopener noreferrer">GitHub Project-5 materials</a></li>
           </ul>
-        </div>
+        </article>
 
-        <div class="surface-card">
-          <h2 class="card-title">Dataset</h2>
-          <p class="body-copy">Add dataset details here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Methodology</h2>
-          <p class="body-copy">Add methodology details here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Key Findings</h2>
-          <p class="body-copy">Add key findings here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Visualizations / Screenshots</h2>
-          <p class="body-copy">Add screenshots, charts, or dashboard previews in the <code>images</code> folder and reference them here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Results</h2>
-          <p class="body-copy">Add results and business impact here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Project Links</h2>
-          <p class="body-copy"><a class="btn-sm hi" href="#">GitHub Repository Link</a></p>
-          <p class="body-copy"><a class="btn-sm" href="#">Live Project / Demo Link</a></p>
-        </div>
-
-        <div>
-          <a class="btn-secondary" href="../../../Copilot - Portfolio Site(3).html#projects">Back to Portfolio</a>
+        <div class="project-nav-links">
+          <a class="btn-sm" href="../project-4/index.html">← Previous Project</a>
+          <a class="btn-sm hi" href="../project-6/index.html">Next Project →</a>
         </div>
       </div>
     </section>
   </main>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+    (() => {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
 </body>
 </html>

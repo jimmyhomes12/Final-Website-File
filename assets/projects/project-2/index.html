@@ -3,68 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 2 | Steven Legoute Portfolio</title>
+  <title>Project 2 | E-commerce RFM Analysis</title>
   <link rel="stylesheet" href="../../../styles.css">
 </head>
-<body class="page-body">
+<body class="page-body project-detail-page project-theme--p2">
   <main class="layout-container page-main">
+    <div class="project-detail-header">
+      <a class="btn-secondary" href="../../../Copilot - Portfolio Site(3).html#projects">← Back to Portfolio</a>
+      <button class="theme-button project-theme-toggle" type="button" onclick="toggleTheme()">Light / Dark</button>
+    </div>
+
     <section class="section-block section-block--no-margin-top">
-      <div class="section-header">
-        <h1 class="section-title">Project 2 Title</h1>
-      </div>
-      <p class="body-copy">Add project description here.</p>
+      <article class="project-hero">
+        <p class="project-kicker">Project 2 · E-commerce Segmentation</p>
+        <h1 class="section-title">E-commerce Sales Performance & RFM Customer Segmentation</h1>
+        <p class="project-summary">This project builds a Python + SQLite pipeline that generates RFM scoring outputs and Tableau-ready files for segmentation and promo performance analysis.</p>
+        <div class="project-chip-row">
+          <span class="project-chip">Python</span><span class="project-chip">SQLite</span><span class="project-chip">SQL CTEs</span><span class="project-chip">Tableau</span><span class="project-chip">RFM</span>
+        </div>
+      </article>
 
       <div class="stack-large stack-large--with-margin-top">
-        <div class="surface-card">
-          <h2 class="card-title">Project Objectives</h2>
-          <p class="body-copy">Add project objectives here.</p>
+        <div class="project-section-grid">
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Business Problem & Objectives</h2>
+            <ul class="project-list">
+              <li>Identify high-value and low-engagement customer segments with a reproducible RFM process.</li>
+              <li>Quantify promo-code order behavior from the same synthetic sales dataset.</li>
+              <li>Export clean files for dashboarding and relationship-based Tableau modeling.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Dataset & Data Products</h2>
+            <ul class="project-list">
+              <li>Raw dataset: <code>synthetic_ecommerce_sales_2025.csv</code> (5,000 rows, 8 columns, 2025-01-01 to 2025-12-31).</li>
+              <li>Unique customers in provided data: 797.</li>
+              <li>Primary outputs: <code>output/promo_roi.csv</code>, <code>output/rfm_segments.csv</code>, <code>data/rfm_scores.csv</code>, <code>data/full_ecom.csv</code>.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Methodology</h2>
+            <ul class="project-list">
+              <li>Load CSV into SQLite table <code>ecom</code> using Python and SQLAlchemy.</li>
+              <li>Create views for order-level and customer-level analysis.</li>
+              <li>Build RFM scores with SQL CTEs and <code>NTILE(5)</code> scoring logic.</li>
+              <li>Export segment and promo summaries, then map to Tableau fields.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Key Findings (Current Outputs)</h2>
+            <ul class="project-list">
+              <li>Promo summary includes four active codes (SAVE10, SUMMER20, FLASH30, WELCOME15).</li>
+              <li>Highest 5-5-5 segment count in current output is 10 customers.</li>
+              <li>Promo order average and non-promo order average are nearly equal in this dataset snapshot.</li>
+              <li>RFM outputs are ready for heatmap views and segment drilldowns in Tableau.</li>
+            </ul>
+          </article>
         </div>
 
-        <div class="surface-card">
-          <h2 class="card-title">Tools &amp; Technologies</h2>
-          <ul class="body-copy">
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Tableau</li>
+        <article class="project-card-detail">
+          <h2 class="project-card-title">Visualization Preview</h2>
+          <div class="project-visual-grid">
+            <figure class="project-visual">
+              <svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrative RFM heatmap based on project schema">
+                <rect width="560" height="300" fill="#f5fdf9"/>
+                <text x="24" y="28" font-size="14" fill="#0f766e" font-family="Inter, sans-serif">Illustrative RFM heatmap layout (based on r_score × f_score)</text>
+                <g>
+                  <rect x="60" y="60" width="80" height="40" fill="#d8fbe8"/><rect x="140" y="60" width="80" height="40" fill="#c3f6de"/><rect x="220" y="60" width="80" height="40" fill="#aaefd1"/><rect x="300" y="60" width="80" height="40" fill="#88e5bf"/><rect x="380" y="60" width="80" height="40" fill="#64d7aa"/>
+                  <rect x="60" y="100" width="80" height="40" fill="#c3f6de"/><rect x="140" y="100" width="80" height="40" fill="#aaefd1"/><rect x="220" y="100" width="80" height="40" fill="#88e5bf"/><rect x="300" y="100" width="80" height="40" fill="#64d7aa"/><rect x="380" y="100" width="80" height="40" fill="#37c18f"/>
+                  <rect x="60" y="140" width="80" height="40" fill="#aaefd1"/><rect x="140" y="140" width="80" height="40" fill="#88e5bf"/><rect x="220" y="140" width="80" height="40" fill="#64d7aa"/><rect x="300" y="140" width="80" height="40" fill="#37c18f"/><rect x="380" y="140" width="80" height="40" fill="#0f766e"/>
+                </g>
+                <text x="68" y="206" font-size="12" fill="#334155">R score</text>
+                <text x="430" y="206" font-size="12" fill="#334155">F score</text>
+                <text x="24" y="250" font-size="12" fill="#64748b">This is an illustrative graphic built from documented project fields; no Tableau screenshot file is included in this repository.</text>
+              </svg>
+              <figcaption class="project-caption">Illustrative heatmap composition aligned to the SQL/Tableau field design in <code>TABLEAU_SETUP.md</code>.</figcaption>
+            </figure>
+            <figure class="project-visual">
+              <svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Promo code ROI bar comparison from output CSV">
+                <rect width="560" height="300" fill="#ffffff"/>
+                <text x="24" y="30" font-size="14" fill="#0f766e" font-family="Inter, sans-serif">Promo ROI (from output/promo_roi.csv)</text>
+                <line x1="70" y1="240" x2="520" y2="240" stroke="#cbd5e1"/>
+                <rect x="90" y="85" width="70" height="155" fill="#14b8a6"/><text x="95" y="260" font-size="11" fill="#334155">SAVE10</text>
+                <rect x="190" y="88" width="70" height="152" fill="#2dd4bf"/><text x="192" y="260" font-size="11" fill="#334155">SUMMER20</text>
+                <rect x="290" y="89" width="70" height="151" fill="#5eead4"/><text x="295" y="260" font-size="11" fill="#334155">FLASH30</text>
+                <rect x="390" y="92" width="70" height="148" fill="#99f6e4"/><text x="392" y="260" font-size="11" fill="#334155">WELCOME15</text>
+                <text x="90" y="78" font-size="11" fill="#0f766e">$163,591.65</text>
+              </svg>
+              <figcaption class="project-caption">Promo revenue totals from exported SQL query results.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project-card-detail project-deliverables">
+          <h2 class="project-card-title">Deliverables & Links</h2>
+          <ul class="project-list">
+            <li>Python pipeline: <a href="../../../Project%20Work/Project-2/ecom_analysis.py">ecom_analysis.py</a></li>
+            <li>Raw dataset: <a href="../../../Project%20Work/Project-2/data/synthetic_ecommerce_sales_2025.csv">synthetic_ecommerce_sales_2025.csv</a></li>
+            <li>RFM scores: <a href="../../../Project%20Work/Project-2/data/rfm_scores.csv">rfm_scores.csv</a></li>
+            <li>Promo output: <a href="../../../Project%20Work/Project-2/output/promo_roi.csv">promo_roi.csv</a></li>
+            <li>Tableau workbook: <a href="../../../Project%20Work/Project-2/tableau_viz/Ecom_RFM_Dashboard.twbx">Ecom_RFM_Dashboard.twbx</a></li>
+            <li>Source folder: <a href="https://github.com/jimmyhomes12/Final-Website-File/tree/main/Project%20Work/Project-2" target="_blank" rel="noopener noreferrer">GitHub Project-2 materials</a></li>
           </ul>
-        </div>
+        </article>
 
-        <div class="surface-card">
-          <h2 class="card-title">Dataset</h2>
-          <p class="body-copy">Add dataset details here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Methodology</h2>
-          <p class="body-copy">Add methodology details here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Key Findings</h2>
-          <p class="body-copy">Add key findings here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Visualizations / Screenshots</h2>
-          <p class="body-copy">Add screenshots, charts, or dashboard previews in the <code>images</code> folder and reference them here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Results</h2>
-          <p class="body-copy">Add results and business impact here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Project Links</h2>
-          <p class="body-copy"><a class="btn-sm hi" href="#">GitHub Repository Link</a></p>
-          <p class="body-copy"><a class="btn-sm" href="#">Live Project / Demo Link</a></p>
-        </div>
-
-        <div>
-          <a class="btn-secondary" href="../../../Copilot - Portfolio Site(3).html#projects">Back to Portfolio</a>
+        <div class="project-nav-links">
+          <a class="btn-sm" href="../project-1/index.html">← Previous Project</a>
+          <a class="btn-sm hi" href="../project-3/index.html">Next Project →</a>
         </div>
       </div>
     </section>
   </main>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+    (() => {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
 </body>
 </html>
