@@ -3,68 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 1 | Steven Legoute Portfolio</title>
+  <title>Project 1 | Gold Price Forecasting with Geopolitical Risk</title>
   <link rel="stylesheet" href="../../../styles.css">
 </head>
-<body class="page-body">
+<body class="page-body project-detail-page project-theme--p1">
   <main class="layout-container page-main">
+    <div class="project-detail-header">
+      <a class="btn-secondary" href="../../../Copilot - Portfolio Site(3).html#projects">← Back to Portfolio</a>
+      <button class="theme-button project-theme-toggle" type="button" onclick="toggleTheme()">Light / Dark</button>
+    </div>
+
     <section class="section-block section-block--no-margin-top">
-      <div class="section-header">
-        <h1 class="section-title">Project 1 Title</h1>
-      </div>
-      <p class="body-copy">Add project description here.</p>
+      <article class="project-hero">
+        <p class="project-kicker">Project 1 · Quantitative Finance</p>
+        <h1 class="section-title">Gold Price Forecasting with Geopolitical Risk (1985–2025)</h1>
+        <p class="project-summary">This case study forecasts next-day gold prices using historical gold/silver prices and geopolitical risk indicators, then presents the model outputs through a Streamlit interface.</p>
+        <div class="project-chip-row">
+          <span class="project-chip">Python</span><span class="project-chip">XGBoost</span><span class="project-chip">Pandas</span><span class="project-chip">Streamlit</span><span class="project-chip">Time Series</span>
+        </div>
+      </article>
 
       <div class="stack-large stack-large--with-margin-top">
-        <div class="surface-card">
-          <h2 class="card-title">Project Objectives</h2>
-          <p class="body-copy">Add project objectives here.</p>
+        <div class="project-section-grid">
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Business Problem & Objectives</h2>
+            <ul class="project-list">
+              <li>Estimate next-day gold price movements with a time-based validation design.</li>
+              <li>Measure whether geopolitical risk variables add predictive value beyond price momentum.</li>
+              <li>Package model outputs for exploration in a recruiter-friendly app workflow.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Dataset & Scope</h2>
+            <ul class="project-list">
+              <li>Source file: <code>Gold-Silver-GeopoliticalRisk_HistoricalData.csv</code> from the project data folder.</li>
+              <li>10,571 daily rows, 15 columns, date span 1985-01-02 to 2025-09-10.</li>
+              <li>Core fields include gold/silver OHLC prices, GPRD indices, and event notes.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Methodology</h2>
+            <ul class="project-list">
+              <li>Missing-value handling and chronological feature engineering.</li>
+              <li>Lag features (1,2,5,10,20), rolling windows, and calendar variables.</li>
+              <li>Time split: 2000–2017 train, 2018–2020 validation (as documented).</li>
+              <li>Benchmarks: naive and 5-day moving average versus XGBoost regression.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Key Findings (Documented)</h2>
+            <ul class="project-list">
+              <li>Validation metrics in project docs: R² 0.9068, RMSE 72.48, MAE 42.02, MAPE 2.43%.</li>
+              <li><code>GOLD_LAG_1</code> is the dominant feature; rolling features are also high-impact.</li>
+              <li>GPRD variables appear with modest contribution, supporting conditional risk influence.</li>
+              <li>Residual spread increases at higher price levels, indicating heteroscedasticity.</li>
+            </ul>
+          </article>
         </div>
 
-        <div class="surface-card">
-          <h2 class="card-title">Tools &amp; Technologies</h2>
-          <ul class="body-copy">
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Tableau</li>
+        <article class="project-card-detail">
+          <h2 class="project-card-title">Visualizations & Model Outputs</h2>
+          <div class="project-visual-grid">
+            <figure class="project-visual">
+              <img src="images/gold_silver_timeseries.png" alt="Gold and silver historical time-series chart">
+              <figcaption class="project-caption">Historical gold and silver price behavior across the full timeline.</figcaption>
+            </figure>
+            <figure class="project-visual">
+              <img src="images/gprd_timeseries.png" alt="Geopolitical risk index time-series chart">
+              <figcaption class="project-caption">Geopolitical risk index trend used as an explanatory signal.</figcaption>
+            </figure>
+            <figure class="project-visual">
+              <img src="images/gold_actual_vs_predicted_xgb.png" alt="Actual versus predicted gold price plot for the validation period">
+              <figcaption class="project-caption">Actual vs predicted validation curve for the XGBoost model.</figcaption>
+            </figure>
+            <figure class="project-visual">
+              <img src="images/feature_importance_xgb.png" alt="Feature importance bar chart for the XGBoost model">
+              <figcaption class="project-caption">Top feature-importance ranking from the trained model.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project-card-detail project-deliverables">
+          <h2 class="project-card-title">Results, Recommendations & Deliverables</h2>
+          <ul class="project-list">
+            <li>Result: complete forecasting pipeline with notebook, serialized model artifacts, forecast CSVs, and Streamlit app.</li>
+            <li>Recommendation: keep persistence baseline as control and explore variance-stabilizing transforms for high-price regimes.</li>
+            <li>Notebook: <a href="../../../Project%20Work/Project-1/sales-forecasting-gold-gpr/notebooks/gold_gpr_forecasting.ipynb">gold_gpr_forecasting.ipynb</a></li>
+            <li>App: <a href="../../../Project%20Work/Project-1/sales-forecasting-gold-gpr/app.py">Streamlit app.py</a></li>
+            <li>Forecast output: <a href="../../../Project%20Work/Project-1/sales-forecasting-gold-gpr/outputs/forecasts/gold_val_forecasts_xgb.csv">gold_val_forecasts_xgb.csv</a></li>
+            <li>Source folder: <a href="https://github.com/jimmyhomes12/Final-Website-File/tree/main/Project%20Work/Project-1" target="_blank" rel="noopener noreferrer">GitHub Project-1 materials</a></li>
           </ul>
-        </div>
+        </article>
 
-        <div class="surface-card">
-          <h2 class="card-title">Dataset</h2>
-          <p class="body-copy">Add dataset details here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Methodology</h2>
-          <p class="body-copy">Add methodology details here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Key Findings</h2>
-          <p class="body-copy">Add key findings here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Visualizations / Screenshots</h2>
-          <p class="body-copy">Add screenshots, charts, or dashboard previews in the <code>images</code> folder and reference them here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Results</h2>
-          <p class="body-copy">Add results and business impact here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Project Links</h2>
-          <p class="body-copy"><a class="btn-sm hi" href="#">GitHub Repository Link</a></p>
-          <p class="body-copy"><a class="btn-sm" href="#">Live Project / Demo Link</a></p>
-        </div>
-
-        <div>
-          <a class="btn-secondary" href="../../../Copilot - Portfolio Site(3).html#projects">Back to Portfolio</a>
+        <div class="project-nav-links">
+          <a class="btn-sm" href="../project-6/index.html">← Previous Project</a>
+          <a class="btn-sm hi" href="../project-2/index.html">Next Project →</a>
         </div>
       </div>
     </section>
   </main>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+    (() => {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
 </body>
 </html>

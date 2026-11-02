@@ -3,68 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 4 | Steven Legoute Portfolio</title>
+  <title>Project 4 | Online Retail Customer Churn Prediction</title>
   <link rel="stylesheet" href="../../../styles.css">
 </head>
-<body class="page-body">
+<body class="page-body project-detail-page project-theme--p4">
   <main class="layout-container page-main">
+    <div class="project-detail-header">
+      <a class="btn-secondary" href="../../../Copilot - Portfolio Site(3).html#projects">← Back to Portfolio</a>
+      <button class="theme-button project-theme-toggle" type="button" onclick="toggleTheme()">Light / Dark</button>
+    </div>
+
     <section class="section-block section-block--no-margin-top">
-      <div class="section-header">
-        <h1 class="section-title">Project 4 Title</h1>
-      </div>
-      <p class="body-copy">Add project description here.</p>
+      <article class="project-hero">
+        <p class="project-kicker">Project 4 · Machine Learning</p>
+        <h1 class="section-title">Online Retail Customer Churn Prediction</h1>
+        <p class="project-summary">End-to-end churn workflow using feature engineering, Logistic Regression and Random Forest models, ROC evaluation, and SHAP interpretation artifacts.</p>
+        <div class="project-chip-row">
+          <span class="project-chip">Python</span><span class="project-chip">scikit-learn</span><span class="project-chip">SHAP</span><span class="project-chip">Random Forest</span><span class="project-chip">Churn Analytics</span>
+        </div>
+      </article>
 
       <div class="stack-large stack-large--with-margin-top">
-        <div class="surface-card">
-          <h2 class="card-title">Project Objectives</h2>
-          <p class="body-copy">Add project objectives here.</p>
+        <div class="project-section-grid">
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Business Problem & Objectives</h2>
+            <ul class="project-list">
+              <li>Estimate which customers are likely to churn and rank the major risk signals.</li>
+              <li>Compare an interpretable baseline model against a tree-based classifier.</li>
+              <li>Translate model outputs into retention-oriented actions.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Dataset</h2>
+            <ul class="project-list">
+              <li>Raw file: <code>online_retail_churn_raw.csv</code> from the project data folder.</li>
+              <li>9,000 customer rows, 17 fields; churn count 1,776 (19.73%).</li>
+              <li>Date field span: 2024-06-20 to 2025-06-20.</li>
+              <li>Includes demographics, spending, engagement, support, and churn label.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Methodology</h2>
+            <ul class="project-list">
+              <li>Data prep and engineered features: Total_Spend, Engagement_Score, High_Support, Income_Band, Days_Since_Last_Purchase.</li>
+              <li>Train/test split with class weighting.</li>
+              <li>Models: Logistic Regression and Random Forest (300 estimators).</li>
+              <li>Evaluation: ROC AUC, confusion-focused metrics, feature importance, and SHAP summaries.</li>
+            </ul>
+          </article>
+          <article class="project-card-detail">
+            <h2 class="project-card-title">Key Findings (From Reports)</h2>
+            <ul class="project-list">
+              <li>Random Forest ROC AUC: 0.5305; Logistic Regression ROC AUC: 0.4882.</li>
+              <li>Top RF importance features: Avg_Time_Per_Visit_Minutes, Days_Since_Last_Purchase, Annual_Income_USD.</li>
+              <li>Top SHAP drivers include Avg_Purchase_Value, Annual_Income_USD, and Avg_Time_Per_Visit_Minutes.</li>
+              <li>Project documentation explicitly frames this as a baseline on synthetic-style signal quality.</li>
+            </ul>
+          </article>
         </div>
 
-        <div class="surface-card">
-          <h2 class="card-title">Tools &amp; Technologies</h2>
-          <ul class="body-copy">
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Tableau</li>
+        <article class="project-card-detail">
+          <h2 class="project-card-title">Model Visuals</h2>
+          <div class="project-visual-grid">
+            <figure class="project-visual">
+              <img src="images/roc_curves.png" alt="ROC curve comparison for churn models">
+              <figcaption class="project-caption">ROC comparison between Logistic Regression and Random Forest pipelines.</figcaption>
+            </figure>
+            <figure class="project-visual">
+              <img src="images/feature_importances.png" alt="Feature importance chart for churn model">
+              <figcaption class="project-caption">Top-20 impurity-based feature importances from the Random Forest model.</figcaption>
+            </figure>
+            <figure class="project-visual">
+              <img src="images/shap_summary.png" alt="SHAP summary plot of churn feature impacts">
+              <figcaption class="project-caption">SHAP summary indicating direction and magnitude of feature-level churn influence.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project-card-detail project-deliverables">
+          <h2 class="project-card-title">Outputs, Recommendations & Deliverables</h2>
+          <ul class="project-list">
+            <li>Output artifacts include trained model files, evaluation charts, and written model summary.</li>
+            <li>Recommended next step from project docs: validate against richer real-world retention signals and run intervention experiments.</li>
+            <li>Notebook: <a href="../../../Project%20Work/Project-4/Python_Data_Analytics/Online_Retail_Churn_Prediction/notebooks/01_online_retail_churn_analysis.ipynb">01_online_retail_churn_analysis.ipynb</a></li>
+            <li>Model summary: <a href="../../../Project%20Work/Project-4/Python_Data_Analytics/Online_Retail_Churn_Prediction/reports/churn_model_summary.md">churn_model_summary.md</a></li>
+            <li>Training script: <a href="../../../Project%20Work/Project-4/Python_Data_Analytics/Online_Retail_Churn_Prediction/src/train_model.py">train_model.py</a></li>
+            <li>Source folder: <a href="https://github.com/jimmyhomes12/Final-Website-File/tree/main/Project%20Work/Project-4" target="_blank" rel="noopener noreferrer">GitHub Project-4 materials</a></li>
           </ul>
-        </div>
+        </article>
 
-        <div class="surface-card">
-          <h2 class="card-title">Dataset</h2>
-          <p class="body-copy">Add dataset details here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Methodology</h2>
-          <p class="body-copy">Add methodology details here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Key Findings</h2>
-          <p class="body-copy">Add key findings here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Visualizations / Screenshots</h2>
-          <p class="body-copy">Add screenshots, charts, or dashboard previews in the <code>images</code> folder and reference them here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Results</h2>
-          <p class="body-copy">Add results and business impact here.</p>
-        </div>
-
-        <div class="surface-card">
-          <h2 class="card-title">Project Links</h2>
-          <p class="body-copy"><a class="btn-sm hi" href="#">GitHub Repository Link</a></p>
-          <p class="body-copy"><a class="btn-sm" href="#">Live Project / Demo Link</a></p>
-        </div>
-
-        <div>
-          <a class="btn-secondary" href="../../../Copilot - Portfolio Site(3).html#projects">Back to Portfolio</a>
+        <div class="project-nav-links">
+          <a class="btn-sm" href="../project-3/index.html">← Previous Project</a>
+          <a class="btn-sm hi" href="../project-5/index.html">Next Project →</a>
         </div>
       </div>
     </section>
   </main>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+    (() => {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
 </body>
 </html>
